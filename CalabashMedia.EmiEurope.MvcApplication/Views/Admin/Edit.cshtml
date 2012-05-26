@@ -1,0 +1,16 @@
+﻿@model CalabashMedia.EmiEurope.MvcApplication.Models.VacancyViewModel
+@{
+    ViewBag.Title = "Emi Europe - Admin Edit";
+}
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@using (Html.BeginForm())
+{
+     @Html.HiddenFor(model => model.Vacancy.VacancyId)
+@Html.HiddenFor(model => model.Vacancy.DatePosted)
+      @Html.Partial("VacancyTemplate", Model)
+}
+<div>
+    @Html.ActionLink("Back to List", "VacancyIndex")
+</div>

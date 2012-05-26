@@ -1,0 +1,100 @@
+﻿@model CalabashMedia.EmiEurope.MvcApplication.Models.VacancyViewModel    
+<table border="0" id="registerTable" class="table-padding" cellpadding="0" cellspacing="8">
+        @Html.ValidationSummary(true)
+        <tr>
+            <td width="150" align="left"><span class="formHeader">@Html.LabelFor(model => model.Vacancy.VacancyTitle) </span></td>
+            <td width="600" align="left">
+                @Html.TextBoxFor(model => model.Vacancy.VacancyTitle, new { @class = "registerTextBox editor-field", @style = "width:422px;" })<br />
+                @Html.ValidationMessageFor(model => model.Vacancy.VacancyTitle)
+            </td>
+        </tr>
+        <tr>
+            <td width="150" align="left" valign="top"><span class="formHeader">@Html.LabelFor(model => model.Vacancy.VacancyDetails) </span>
+            </td>
+            <td width="600" align="left">
+                @Html.TextAreaFor(model => model.Vacancy.VacancyDetails, new { @cols = 50, @rows = 10, @class = "Selectbox editor-field" })<br />
+                @Html.ValidationMessageFor(model => model.Vacancy.VacancyDetails)
+            </td>
+        </tr>
+     @*   <tr>
+            <td width="150" align="left"><span class="formHeader">@Html.LabelFor(model => model.Location)
+            </span></td>
+            <td width="600" align="left">
+                @Html.TextBoxFor(model => model.Location, new { @class = "registerTextBox editor-field", @style = "width:422px;" })<br />
+                @Html.ValidationMessageFor(model => model.Location)
+            </td>
+        </tr>*@
+        <tr>
+            <td width="150" align="left"><span class="formHeader">@Html.LabelFor(model => model.Vacancy.Duration)
+            </span></td>
+            <td width="600" align="left">
+                @Html.TextBoxFor(model => model.Vacancy.Duration, new { @class = "registerTextBox editor-field", @style = "width:422px;" })<br />
+                @Html.ValidationMessageFor(model => model.Vacancy.Duration)
+            </td>
+        </tr>
+        <tr>
+            <td width="150" align="left"><span class="formHeader">@Html.LabelFor(model => model.Vacancy.Salary)
+            </span></td>
+            <td width="600" align="left">
+                @Html.TextBoxFor(model => model.Vacancy.Salary, new { @class = "editor-field registerTextBox", @style = "width:422px;" })<br />
+                @Html.ValidationMessageFor(model => model.Vacancy.Salary)
+            </td>
+        </tr>
+        <tr>
+            <td width="150" align="left"><span class="formHeader">@Html.LabelFor(model => model.Vacancy.StartDate)
+            </span></td>
+            <td width="600" align="left">
+                @Html.TextBoxFor(model => model.Vacancy.StartDate, new { @class = "registerTextBox editor-field", @style = "width:422px;" })<br />
+                @Html.ValidationMessageFor(model => model.Vacancy.StartDate)
+            </td>
+        </tr>
+        <tr>
+            <td width="150" align="left"><span class="formHeader">@Html.LabelFor(model => model.Vacancy.Contact)
+            </span></td>
+            <td width="600" align="left">
+                @Html.TextBoxFor(model => model.Vacancy.Contact, new { @class = "registerTextBox editor-field", @style = "width:422px;" })<br />
+                @Html.ValidationMessageFor(model => model.Vacancy.Contact)
+            </td>
+        </tr>
+         @*   <tr>
+            <td width="150" align="left"><span class="formHeader">Employment Type </span></td>
+            <td width="600" align="left">
+                  @Html.DropDownListFor(model => model.Vacancy.EmploymentTypeId, Model.EmploymentTypes,new {@class="registerTextBox editor-field", style="width:422px;"})
+
+                <br />
+                @Html.ValidationMessageFor(model =>  model.Vacancy.EmploymentTypeId)
+            </td>
+        </tr>
+    <tr>
+            <td width="150" align="left"><span class="formHeader">@Html.LabelFor(model => model.Vacancy.Location)
+                </span></td>
+            <td width="600" align="left">
+               @Html.TextBoxFor(model => model.Vacancy.Location, new { @class = "registerTextBox editor-field", @style = "width:422px;" })<br />
+               <br>
+                    @Html.ValidationMessageFor(model => model.Vacancy.Location)
+              
+            </td>
+        </tr>*@
+    <tr>
+        <td width="150" align="left"><span class="formHeader">State</span></td>
+        <td width="600" align="left">
+            @Html.DropDownListFor(model => model.Vacancy.StateId, Model.States,new {@class="registerTextBox editor-field", style="width:422px;"})
+            <br />
+            @Html.ValidationMessageFor(model => model.Vacancy.StateId)
+        </td>
+    </tr>
+ <tr>
+            <td width="150" align="left"><span class="formHeader">Country</span></td>
+            <td width="600" align="left">
+                @Html.DropDownListFor(model => model.Vacancy.RegionId, Model.Regions,new {@class="registerTextBox editor-field", style="width:422px;"})
+                <br />
+                @Html.ValidationMessageFor(model => model.Vacancy.RegionId)
+            </td>
+        </tr>
+        <tr>
+            <td width="150" align="left">&nbsp;</td>
+            <td width="600" align="left">
+                <button type="submit" class="sendButton">Send</button>
+            </td>
+        </tr>
+    </table>

@@ -1,0 +1,70 @@
+﻿@model CalabashMedia.EmiEurope.Domain.Entities.Vacancy
+
+@{
+    ViewBag.Title = "Emi Europe - Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Vacancy</legend>
+
+    <div class="display-label">VacancyTitle</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VacancyTitle)
+    </div>
+
+    <div class="display-label">VacancyDetails</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VacancyDetails)
+    </div>
+
+    <div class="display-label">Location</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location)
+    </div>
+
+    <div class="display-label">Duration</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Duration)
+    </div>
+
+    <div class="display-label">Salary</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Salary)
+    </div>
+
+    <div class="display-label">StartDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartDate)
+    </div>
+
+    <div class="display-label">Contact</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Contact)
+    </div>
+
+    <div class="display-label">EmploymentTypeId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmploymentTypeId)
+    </div>
+
+    <div class="display-label">DatePosted</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DatePosted)
+    </div>
+
+    <div class="display-label">RegionId</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RegionId)
+    </div>
+
+    <div class="display-label">State</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.VacancyId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

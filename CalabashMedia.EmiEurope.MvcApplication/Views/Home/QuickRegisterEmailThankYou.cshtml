@@ -1,0 +1,16 @@
+﻿@model  CalabashMedia.EmiEurope.Domain.Entities.QuickRegisterEmail
+@{
+    ViewBag.Title = "Emi Europe - Register Email Thank You";
+}
+<table border="0" cellspacing="0" cellpadding="0" class="table-padding">
+    <tr>
+        <td width="552" valign="top" height="350px">
+            <p>
+                Thank You, @Model.FirstName @Model.LastName for enquiring about EMI Europe. Your
+                email enquiry has been successfully submitted. We will be in contact with you shortly.
+                <br>
+                 <a href="@Url.Action("Index","Home")">Back</a>
+            </p>
+        </td>
+    </tr>
+</table>

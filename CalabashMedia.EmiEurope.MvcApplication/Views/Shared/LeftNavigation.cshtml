@@ -1,0 +1,102 @@
+﻿@model  CalabashMedia.EmiEurope.Domain.Entities.QuickRegisterEmail
+            @using (Html.BeginForm("SendQuickRegisterEmail", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td style="padding-top: 20px;">
+                                <img src="@Url.Content("~/Content/themes/Images/QuickRegistration.jpg")" alt="emi europe quick registration"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left"><span class="formHeaderHomePage">Title</span></td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left">
+                                <select name="title" class="SelectboxHomePage ">
+                                    <option></option>
+                                    <option>Mr</option>
+                                    <option>Mrs</option>
+                                    <option>Miss</option>
+                                    <option>Dr</option>
+                                    <option>Prof</option>
+                                    <option>Ms</option>
+                                </select>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left" ><span class="formHeaderHomePage">First Name</span></td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left">
+                                @Html.TextBoxFor(model => model.FirstName, new {@class = "registerTextBox ", @style = "width:130px;"})<br />
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left"  ><span class="formHeaderHomePage">Last Name</span></td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left" >
+                                @Html.TextBoxFor(model => model.LastName, new {@class = "registerTextBox ", @style = "width:130px;"})<br />
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left"  ><span class="formHeaderHomePage">Telephone</span></td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left">
+                                @Html.TextBoxFor(model => model.Telephone, new {@class = "registerTextBox", @style = "width:130px;"})
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left"  ><span class="formHeaderHomePage">Email Address</span></td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left">
+                                @Html.TextBoxFor(model => model.EmailAddress, new {@class = "registerTextBox ", @style = "width:130px;"})<br />
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left"  ><span class="formHeaderHomePage">Profession</span></td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left">
+                                <select name="profession" class="SelectboxHomePage">
+                                    <option></option>
+                                    <option>Cath Lab RN's</option>
+                                    <option>Nurse Practitioners </option>
+                                    <option>Cath Lab Managers </option>
+                                    <option>Executives and VP's</option>
+                                    <option>Cath Lab Directors </option>
+                                    <option>Cardiologists</option>
+                                    <option>Surgeons</option>
+                                    <option>Clinical Nurse Specialist </option>
+                                    <option>Chief Nursing Officers</option>
+                                    <option>Electrophysiologists</option>
+                                </select>
+                                
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="130" align="left" valign="top"><span class="formHeaderHomePage">Attach CV</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="130" align="left">
+                                @Html.TextBoxFor(model => model.Attachment, new { type = "file", @size = 6, @class = "", @style = "width:130px;" })<br />
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 10px; padding-bottom: 0px;" align="right">
+                               <button type="submit" class="sendButton">Send</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }

@@ -1,0 +1,37 @@
+﻿@using CalabashMedia.EmiEurope.MvcApplication.Helpers
+@model CalabashMedia.EmiEurope.MvcApplication.Models.VacancyViewModel
+@{
+    ViewBag.Title = "Emi Europe - Admin Vacancy List";
+}
+<table id="vacancyDetailTable" width="100%" cellspacing="0" cellpadding="2" border="0" class="table-padding">
+    <tr>
+        <td colspan="3" valign="top">
+            <img src="@Url.Content("~/content/themes/Images/PageHeader/vacancies_header.gif")" alt="Vacancies Header"  width="184" height="30"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3" valign="top">
+            <p>
+                @Html.ActionLink("Create New Vacancy", "Create")
+            </p>
+        </td>
+    </tr>
+    @if (Model.Vacancies.Count > 0)
+    {
+        foreach (var item in Model.Vacancies)
+        {
+            Html.RenderPartial("VacancyDetailsAdmin", item);
+        }
+    }
+    else
+    {
+        <tr>
+            <td colspan="3" valign="top">
+                <p>There are no vacancies.</p>
+            </td>
+        </tr>
+    }
+</table>
+<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("VacancyIndex", new { page = x }))
+</div>

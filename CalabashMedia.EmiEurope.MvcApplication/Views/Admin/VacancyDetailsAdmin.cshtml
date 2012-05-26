@@ -1,0 +1,98 @@
+﻿@model CalabashMedia.EmiEurope.Domain.Entities.Vacancy
+<tr>
+    <td colspan="3" class="vacancyJobTitleheader">
+        @Html.DisplayFor(modelItem => Model.VacancyTitle)
+    </td>
+</tr>
+<tr>
+    <td colspan="3" class="vacancyheader">Details: </td>
+</tr>
+<tr>
+    <td class="vacancyDescription" colspan="3">
+        @Html.DisplayFor(modelItem => Model.VacancyDetails)
+    </td>
+</tr>
+
+<tr>
+    <td class="vacancyheader">Duration: </td>
+    <td width="100px">&nbsp; </td>
+    <td class="vacancyDescription">
+        @Html.DisplayFor(modelItem => Model.Duration)
+    </td>
+</tr>
+<tr>
+    <td class="vacancyheader">Salary: </td>
+    <td width="100px">&nbsp; </td>
+    <td class="vacancyDescription">
+        @Html.DisplayFor(modelItem => Model.Salary)
+    </td>
+</tr>
+<tr>
+    <td class="vacancyheader">Start Date: </td>
+    <td width="100px">&nbsp; </td>
+    <td class="vacancyDescription">
+        @Html.DisplayFor(modelItem => Model.StartDate)
+    </td>
+</tr>
+@*<tr>
+    <td class="vacancyheader">Location: </td>
+    <td width="100px">&nbsp; </td>
+    <td class="vacancyDescription">
+          @Html.DisplayFor(modelItem => Model.Location)
+      
+    </td>
+</tr>*@
+<tr>
+    <td class="vacancyheader">State: </td>
+    <td width="100px">&nbsp; </td>
+    <td class="vacancyDescription">
+        @Html.DisplayFor(modelItem => Model.State.Name)
+    </td>
+</tr>
+<tr>
+    <td class="vacancyheader">Country: </td>
+    <td width="100px">&nbsp; </td>
+    <td class="vacancyDescription">
+        @Html.DisplayFor(modelItem => Model.Region.Name)
+    </td>
+</tr>
+<tr>
+    <td class="vacancyheader">Date Posted: </td>
+    <td width="100px">&nbsp; </td>
+    <td class="vacancyDescription">
+          @Html.DisplayFor(modelItem => Model.DatePosted)
+    </td>
+</tr>
+<tr>
+    <td class="vacancyheader">Reference: </td>
+    <td width="100px">&nbsp; </td>
+    <td class="vacancyDescription">EMI @Html.DisplayFor(modelItem => Model.VacancyId)
+    </td>
+</tr>
+<tr>
+    <td class="vacancyheader">Contact: </td>
+    <td width="100px">&nbsp; </td>
+    <td class="vacancyDescription"><a href="mailto:hr@emieurope.com&subject=Apply">
+                                       @Html.DisplayFor(modelItem => Model.Contact)</a></td>
+</tr>
+@*<tr>
+     <td class="vacancyheader">Employment Type: </td>
+    <td width="100px">&nbsp; </td>
+    <td class="vacancyDescription"> @Html.DisplayFor(modelItem => Model.EmploymentType.Name)
+</tr>*@
+<tr>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.VacancyId }) |
+        @Ajax.ActionLink("Delete", "Delete", "Admin", new { id = Model.VacancyId }, new AjaxOptions { Confirm = "Are you sure you want to delete this record?", HttpMethod = "Post",OnComplete = "deleteVacancy();"})
+    </td>
+</tr>
+<tr>
+    <td height="25px">&nbsp; </td>
+</tr>
+<script type="text/javascript">
+    function deleteVacancy()
+    {
+        window.location.href = 'VacancyIndex';
+    }
+
+</script>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="nurses recruitment agency">
+    <meta name="keywords" content="hospital and nursing jobs, caribbean nursing jobs, antigua nursing jobs, caribbean nurses, nursing travel jobs, caribbean travel nurses, medical recruitment, nurses vacancies, medical jobs, caribean nurses, doctors,bermuda medical jobs, Doctors bahamas vacancies,PT, OT, Speech Therapist, California PT jobs, medical staffing, medical referrals, LVN">
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <!--[if IE 8]>
+<link href="@Url.Content("~/Content/Site_ie8.css")" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+   <!--[if IE 7]>
+<link href="@Url.Content("~/Content/Site_ie7.css")" rel="stylesheet" type="text/css" />
+<![endif]-->
+    <script src="@Url.Content("~/Scripts/jquery-1.6.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/modernizr-2.0.6-development-only.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/EmiEurope.js")" type="text/javascript"></script>
+     <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+	<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div id="mainContainer">
+        <div style="background-color: #ffffff;">
+            <span>
+                <img src="@Url.Content("~/Content/themes/Images/emieurope-logo.gif")" alt="emi europe banner"
+                     class="header-Image" />
+            </span><span>
+                       <img src="@Url.Content("~/Content/themes/Images/emieurope-banner.jpg")" alt="emi europe banner"
+                            class="header-Banner" />
+                   </span>
+        </div>
+        <div>
+            <div style="float: left; width: 118px;">
+                &nbsp;
+            </div>
+            <div class="topOrangeBorderContainer">
+                <div class="topOrangeBorderContainerLeft">
+                    &nbsp;
+                </div>
+                <div class="topOrangeBorderContainerRight">
+                    @Html.Partial("TopNavigation")
+                </div>
+                <div class="clear_1px;">&nbsp;</div>
+            </div>
+        </div>
+
+
+        <div class="clear_1px;">&nbsp;</div>
+
+        <div style="background-color: #ffffff; float: left;">
+            <div style="float: left; width: 156px;  background-color: #ffffff;">
+                @Html.Partial("LeftNavigation")
+            </div>
+            <div style="float: right; width: 600px; background-color: #ffffff;border-left: 1px solid #FF893C;">
+                @RenderBody()
+            </div>
+        </div>
+        <div class="clear_1px;">&nbsp;</div>
+        @Html.Partial("Footer")
+    </div>
+</body>
+</html>

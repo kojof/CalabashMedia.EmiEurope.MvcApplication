@@ -1,0 +1,18 @@
+<publishData>
+  <publishTarget publishUrl="D:\Deploy\EmiEurope Service\">
+    <file relUrl="CalabashMedia.EmiEurope.Service.VacancyService.svc" publishTime="05/23/2012 00:10:33" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="04/29/2012 21:13:28" />
+    <file relUrl="bin/CalabashMedia.EmiEurope.DataAccess.pdb" publishTime="05/20/2012 21:46:30" />
+    <file relUrl="bin/CalabashMedia.EmiEurope.Service.dll.config" publishTime="05/20/2012 21:34:59" />
+    <file relUrl="bin/WebActivator.dll" publishTime="04/29/2012 11:28:00" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="04/29/2012 21:13:28" />
+    <file relUrl="bin/CalabashMedia.EmiEurope.Service.dll" publishTime="05/23/2012 00:10:03" />
+    <file relUrl="bin/CalabashMedia.EmiEurope.Service.pdb" publishTime="05/23/2012 00:10:03" />
+    <file relUrl="bin/DataAnnotationsExtensions.ClientValidation.dll" publishTime="04/29/2012 11:28:00" />
+    <file relUrl="bin/CalabashMedia.EmiEurope.DataAccess.dll" publishTime="05/20/2012 21:46:30" />
+    <file relUrl="bin/CalabashMedia.EmiEurope.Domain.pdb" publishTime="05/20/2012 21:46:30" />
+    <file relUrl="Web.config" publishTime="05/20/2012 21:34:59" />
+    <file relUrl="bin/DataAnnotationsExtensions.dll" publishTime="04/29/2012 11:28:00" />
+    <file relUrl="bin/CalabashMedia.EmiEurope.Domain.dll" publishTime="05/20/2012 21:46:30" />
+  </publishTarget>
+</publishData>
